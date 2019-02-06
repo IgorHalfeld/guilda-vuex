@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Guilda Vuex</title>
+</head>
+<body ng-app="NOALVOApp">
+  <div class="container" ng-controller="MainController">
+    <div class="loading" ng-if="isLoading">
+      <div class="loading-spinner"></div>
+    </div>
+    <h1 class="container-title">The Amazing App! 😍</h1>
+    <ul class="container-list">
+      <li class="container-list--item" ng-repeat="user in users track by user.id">
+        <p>{{ user.name }}</p>
+        <span>{{ user.email }}</span>
+      </li>
+    </ul>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="users.service.js"></script>
+</body>
+</html>
